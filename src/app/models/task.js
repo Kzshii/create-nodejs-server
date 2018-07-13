@@ -4,22 +4,22 @@ const bcrypt = require('bcryptjs');
 const TaskSchema = new mongoose.Schema({
   title: {
     type: String,
-    require: true,
+    required: true,
   },
   project: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Project",
-    require: true,
+    required: true,
   },
   assignedTo: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-    require: true,
+    required: true,
   },
   completed: {
     type: Boolean,
     default: false,
-    require: true,
+    required: true,
   },
   createAt: {
     type: Date,

@@ -12,11 +12,12 @@
     "mongoose": "^5.2.3",
     "nodemailer": "^4.6.7",
     "nodemailer-express-handlebars": "^3.0.0",
+    "nodemon": "^1.18.2",
     "path": "^0.12.7"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./src/index.js"
   },
   "author": "",
   "license": "ISC"
