@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
     const project = await Project.create({ title, description, user: req.userId })
     
     await Promise.all(tasks.map(async task => {
-      const projectTask = new Task({ ...task, project: project._id });
+      const projectTask = new Task({ task, project: project._id });
 
       await projectTask.save();
 
@@ -62,7 +62,7 @@ router.put('/:projectId', async (req, res) => {
     await Task.remove({ project: project._id });
 
     await Promise.all(tasks.map(async task => {
-      const projectTask = new Task({ ...task, project: project._id });
+      const projectTask = new Task({ task, project: project._id });
 
       await projectTask.save();
 
